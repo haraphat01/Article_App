@@ -59,10 +59,16 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.1)
+    autoprefixer-rails (9.8.6.3)
+      execjs
     bcrypt (3.1.15)
     bindex (0.8.1)
     bootsnap (1.4.8)
       msgpack (~> 1.0)
+    bootstrap (4.4.1)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 1.14.3, < 2)
+      sassc-rails (>= 2.0.0)
     bootstrap-will_paginate (1.0.0)
       will_paginate
     builder (3.2.4)
@@ -91,6 +97,7 @@ GEM
       warden (~> 1.2.3)
     diff-lcs (1.4.4)
     erubi (1.9.0)
+    execjs (2.7.0)
     faker (2.13.0)
       i18n (>= 1.6, < 2)
     ffi (1.13.1)
@@ -145,6 +152,7 @@ GEM
     parallel (1.19.2)
     parser (2.7.1.4)
       ast (~> 2.4.1)
+    popper_js (1.16.0)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -295,6 +303,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (>= 1.4.2)
+  bootstrap (~> 4.4.1)
   bootstrap-will_paginate (= 1.0.0)
   byebug
   capybara
