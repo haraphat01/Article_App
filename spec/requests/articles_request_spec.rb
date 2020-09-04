@@ -4,14 +4,21 @@ RSpec.describe "Articles", type: :request do
 
   describe "GET /index" do
     it "returns http success" do
-      get "/article/index"
+      get "/articles/index"
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "GET /article" do
+  describe "GET /create" do
     it "returns http success" do
-      get "/article/article"
+      get "/articles/create"
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET /new" do
+    it "returns http success" do
+      get "/articles/new"
       expect(response).to have_http_status(:success)
     end
   end

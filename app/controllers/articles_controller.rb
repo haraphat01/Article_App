@@ -1,6 +1,5 @@
-class ArticleController < ApplicationController
-  def index
-  end
+class ArticlesController < ApplicationController
+  def index; end
 
   def new
     @article = Article.new
@@ -24,6 +23,6 @@ class ArticleController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:title, :content, category_ids: [])
+    params.require(:article).permit(:title, :text, :image, category_ids: [])
   end
 end

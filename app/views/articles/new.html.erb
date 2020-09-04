@@ -1,0 +1,16 @@
+<h1>Articles#new</h1>
+<p>Find me in app/views/articles/new.html.erb</p>
+<%= form_with(model: @article, local: true) do |f|%>
+    <%= f.label :title%>
+    <%= f.text_field :title,  placeholder: "Title of article" %>
+    <%= f.label :content  %>
+    <%= f.text_area :text, placeholder: "Description of article" %>
+    <%= f.label "Add an image"  %>
+    <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png' %>
+    <%= f.label :category%>
+    <%= f.collection_select(:category_ids, Category.all, :id, :name,
+            { prompt: "Make your selection from the list below (can't be empty)"}, { multiple: true, size: 3, class: "custom-select shadow rounded" }) %>
+
+    
+    <%= f.submit "Post" %>
+    <% end %> 
