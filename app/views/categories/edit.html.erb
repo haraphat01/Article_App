@@ -1,2 +1,6 @@
-<h1>Categories#edit</h1>
-<p>Find me in app/views/categories/edit.html.erb</p>
+<div class="container mt-2">
+    <h3 class="text-secondary">Editing Category</h3>
+    <%= permit_category(@category) %>
+    <%= link_to 'Show', @category, class: "btn btn-info mt-2" %> 
+    <%= link_to 'Back', categories_path, class: "btn btn-secondary mt-2" %>
+</div>
