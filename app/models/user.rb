@@ -3,9 +3,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-  validates :name, presence: true, uniqueness: true, length: { minimum: 5 }
-  validates :email, presence: true, uniqueness: true, length: { minimum: 5 }
-  has_many :articles, class_name: 'Article', foreign_key: :author_id
-  has_many :votes
-  has_many :liked_posts, through: :votes
+         VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i.freeze
+         validates :name, presence: true, length: { minimum: 3, maximum: 25 }, uniqueness: true
+         validates :email, presence: true, length: { maximum: 255 },
+                           format: { with: VALID_EMAIL_REGEX },
+                           uniqueness: true
+         has_many :created_articles, foreign_key: 'author_id', class_name: 'Article'
+         has_many :votes, dependent: :destroy
+         has_many :categories
 end
