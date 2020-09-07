@@ -1,24 +1,24 @@
 require 'rails_helper'
 
-RSpec.describe "Homes", type: :request do
-
-  describe "GET /index" do
-    it "returns http success" do
-      get "/home/index"
-      expect(response).to have_http_status(:success)
-    end
-  end
+RSpec.describe "Sessions", type: :request do
 
   describe "GET /new" do
     it "returns http success" do
-      get "/home/new"
+      get "/sessions/new"
       expect(response).to have_http_status(:success)
     end
   end
 
-  describe "GET /show" do
+  describe "GET /create" do
     it "returns http success" do
-      get "/home/show"
+      get "/sessions/create"
+      expect(response).to have_http_status(:success)
+    end
+  end
+
+  describe "GET /destroy" do
+    it "returns http success" do
+      get "/sessions/destroy"
       expect(response).to have_http_status(:success)
     end
   end
