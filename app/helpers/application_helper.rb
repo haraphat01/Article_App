@@ -58,7 +58,7 @@ module ApplicationHelper
     end
   end
 
-  def order_categories(category)
+  def cat_ordering(category)
     if !category.articles.empty?
       render partial: 'cat_articles', locals: { category: category }
     else
@@ -70,7 +70,7 @@ module ApplicationHelper
     link_to('New Category', new_category_path, class: 'btn btn-success mt-2 mx-2') if logged_in?
   end
 
-  def cat_in_articles(form)
+  def article_cat(form)
     render partial: 'cat_list', locals: { form: form } if current_user && Category.any?
   end
 

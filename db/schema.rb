@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_07_095938) do
+ActiveRecord::Schema.define(version: 2020_09_07_123141) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 2020_09_07_095938) do
   create_table "articles", force: :cascade do |t|
     t.integer "author_id"
     t.string "title"
-    t.text "content"
+    t.text "text"
     t.integer "votes_count"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -58,7 +58,7 @@ ActiveRecord::Schema.define(version: 2020_09_07_095938) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "username"
+    t.string "name"
     t.string "email"
     t.boolean "admin"
     t.datetime "created_at", precision: 6, null: false

@@ -13,6 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+     background-color: pink;
+    color: black;
+    font-size: 25px;
+   
+  }
+ 
  .background-image {
      background-repeat: no-repeat;
  }
@@ -211,3 +219,25 @@ footer p {
     border-bottom: 2px solid #F9A532;
     height: 22px;
 }
+
+.dark-mode {
+    background-color: black;
+    color: white;
+    
+    .general {
+        border: 10px solid pink;
+        }
+
+    .lower-nav, .top-section  {
+        background-color: black;
+       
+    }
+
+    nav {
+        color: #777;
+        background-color: black;
+        border-top: 10px solid black;
+        border-right: 10px solid black;
+        border-left: 10px solid #4E443F;
+    }
+  }
