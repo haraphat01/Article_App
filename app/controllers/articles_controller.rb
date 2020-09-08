@@ -1,4 +1,3 @@
-# rubocop:disable Style/GuardClause
 class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
   before_action :require_user, only: %i[new edit update destroy show index]
@@ -18,7 +17,7 @@ class ArticlesController < ApplicationController
   def edit; end
 
   def create
-    @article = current_user.created_articles.new(article_params)
+    @article = current_user.created_articles.build(article_params)
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
@@ -73,4 +72,3 @@ class ArticlesController < ApplicationController
     end
   end
 end
-# rubocop:enable Style/GuardClause

@@ -1,4 +1,3 @@
-# rubocop:disable Style/GuardClause, Layout/LineLength
 module ApplicationHelper
   def like_or_dislike_btn(article)
     if current_user
@@ -59,7 +58,7 @@ module ApplicationHelper
     end
   end
 
-  def cat_ordering(category)
+  def order_categories(category)
     if !category.articles.empty?
       render partial: 'cat_articles', locals: { category: category }
     else
@@ -71,7 +70,7 @@ module ApplicationHelper
     link_to('New Category', new_category_path, class: 'btn btn-success mt-2 mx-2') if logged_in?
   end
 
-  def article_cat(form)
+  def cat_in_articles(form)
     render partial: 'cat_list', locals: { form: form } if current_user && Category.any?
   end
 
@@ -83,4 +82,3 @@ module ApplicationHelper
     category.name unless @categories.empty?
   end
 end
-# rubocop:enable Style/GuardClause, Layout/LineLength

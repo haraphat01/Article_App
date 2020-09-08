@@ -10,18 +10,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://kit.fontawesome.com/668d372fa7.js" crossorigin="anonymous"></script>
-
-    <%= javascript_pack_tag 'application' %>
-    </head>
+  </head>
 
   <body>
     <div class="general">
     <div class="inner-section">
       <nav class="navbar navbar-expand-lg d-flex flex-row">
         <div class ="float-left d-flex col-md-3">
-          <h2 class="d-flex"> The Punch </h2>
+          <h2 class="d-flex"> Punch </h2>
           <div class="dummy-red"></div>
-          
         </div>
         <div class="col-md-6 justify-content-center d-flex middle-division">
           <div class ="float-left">
@@ -34,6 +31,7 @@
               <%= link_to "ARTICLES", articles_path, class: "navbar-brand" %>
             </a>
           </div>
+          
           <div class ="float-left">
             <a class = "active">
               <%= link_to "CATEGORIES", categories_path, class: "navbar-brand" %>
@@ -44,9 +42,8 @@
             
             <button onclick="myFunction()">Toggle dark mode</button>
           </div>
-
-
         </div>
+
         <div class="collapse navbar-collapse d-flex justify-content-end col-md-3 authenticate" >
           <ul class="navbar-nav">
             <% if !logged_in? %>
@@ -89,7 +86,7 @@
      </div> 
      <footer class="d-flex w-100">
         <div class="d-flex col-md-2">
-          <h4 class="d-flex mt-1 mr-1 text-white"> The Punch </h4>
+          <h4 class="d-flex mt-1 mr-1 text-white"> Punch </h4>
           <div class="dummy-pink"></div>
         </div> 
         <div class="col-md-8 d-flex pt-3 d-flex justify-content-center">
@@ -112,15 +109,13 @@
         </div>
      </footer>
     </div>
-    
-
 
 
     <script>
-function myFunction() {
-   var element = document.body;
-   element.classList.toggle("dark-mode");
-}
-</script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
   </body>
 </html>
