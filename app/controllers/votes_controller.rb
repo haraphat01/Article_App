@@ -3,7 +3,7 @@ class VotesController < ApplicationController
     @vote = current_user.votes.new(vote_params)
 
     if @vote.save
-      redirect_to articles_path, notice: 'You voted a article.'
+      redirect_to articles_path, notice: 'You voted an article.'
     else
       redirect_to articles_path, alert: 'You cannot vote this article.'
     end

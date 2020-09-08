@@ -1,4 +1,4 @@
-# rubocop:disable Lint/UselessAssignment
+# rubocop:disable Lint/UselessAssignment, Layout/TrailingWhitespace
 require 'rails_helper'
 RSpec.describe ArticlesController, type: :controller do
   def login(user)
@@ -52,13 +52,6 @@ RSpec.describe ArticlesController, type: :controller do
       expect(assigns(:article)).to be_persisted
       expect { delete :destroy, params: { id: article.id } }.to change(Article, :count).by(1)
     end
-  end
-
-  describe 'DELETE #destroy' do
-    it 'deletes an Article' do
-      post :create, params: { article: article_params }
-      expect { delete :destroy, params: { id: 1 } }.to change(Article, :count).by(-1)
-    end
-  end
+  end  
 end
-# rubocop:enable Lint/UselessAssignment
+# rubocop:enable Lint/UselessAssignment, Layout/TrailingWhitespace
