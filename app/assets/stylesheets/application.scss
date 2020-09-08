@@ -14,229 +14,228 @@
  *= require_self
  */
 
- body {
-    background-color: pink;
-    color: black;
-    font-size: 25px;
-  }
-  
-  .background-image {
-    background-repeat: no-repeat;
-    flex: 1;
-  }
-  
-  .category-button {
-    position: fixed;
-    right: 0;
-    margin-right: 20px;
-  }
-  
-  .title {
-    bottom: 0;
-    color: white;
-    height: 30px;
-  }
-  
-  .title-name {
-    border-bottom: 2px solid yellow;
-  }
-  
-  .name-underline {
-    height: 16%;
-  }
-  
-  .inner-title {
-    color: #fbc46a;
-    border-bottom: 2px solid #fbc46a;
-  }
-  
+body {
+  background-color: pink;
+  color: black;
+  font-size: 25px;
+}
+
+.background-image {
+  background-repeat: no-repeat;
+  flex: 1;
+}
+
+.category-button {
+  position: fixed;
+  right: 0;
+  margin-right: 20px;
+}
+
+.title {
+  bottom: 0;
+  color: white;
+  height: 30px;
+}
+
+.title-name {
+  border-bottom: 2px solid yellow;
+}
+
+.name-underline {
+  height: 16%;
+}
+
+.inner-title {
+  color: #fbc46a;
+  border-bottom: 2px solid #fbc46a;
+}
+
+.general {
+  border: 10px solid #4e443f;
+  min-height: 669px;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  scroll-behavior: auto;
+}
+
+.lower-nav {
+  background-color: #847e78;
+  height: 5px;
+  position: fixed;
+  z-index: 1;
+}
+
+nav {
+  color: #777;
+  height: 75px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  background-color: #fff;
+  align-items: center;
+  border-top: 10px solid #4e443f;
+  border-right: 10px solid #4e443f;
+  border-left: 10px solid #4e443f;
+  right: 0;
+  left: 0;
+}
+
+.section-1 {
+  scroll-behavior: auto;
+}
+
+.dummy-red,
+.dummy-pink {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.dummy-pink {
+  margin-top: 17px;
+}
+
+.middle-division a,
+.authenticate a {
+  font-size: medium;
+  font-weight: bolder;
+  color: #b0aeab;
+}
+
+.conditions a {
+  color: #f45f25;
+}
+
+.middle-division a:hover {
+  color: #f46226;
+}
+
+.login {
+  border-right: 2px solid #b0aeab;
+  height: 15px;
+  margin-top: 12px;
+}
+
+footer p {
+  font-size: small;
+}
+
+.login p {
+  margin-top: -12px;
+}
+
+.search {
+  margin-top: 8px;
+  color: #b0aeab;
+  cursor: pointer;
+}
+
+.main-article {
+  height: 360px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: none;
+}
+
+.category-file,
+.central-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.desc {
+  bottom: 0;
+  height: 90px;
+}
+
+.main-heading {
+  color: #cd551f;
+}
+
+.category-main {
+  width: 100%;
+}
+
+.inner-category {
+  display: flex;
+}
+
+.primary-part {
+  flex: 1;
+}
+
+footer {
+  background-color: #4e443f;
+  height: 40px;
+  bottom: 0;
+  position: fixed;
+}
+
+.long-article {
+  scroll-behavior: smooth;
+  overflow: auto;
+}
+
+.top-section {
+  background-color: #e8e8e8;
+  min-height: 550px;
+  overflow: auto;
+  padding-bottom: 30px;
+  margin-top: 65px;
+}
+
+.text-deco {
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+}
+
+.text-read,
+.conditions {
+  font-size: small;
+  color: #f45f25;
+}
+
+.deco-color {
+  background-color: #91979d;
+}
+
+.navbar {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.special-category {
+  color: #f9a532;
+  border-bottom: 2px solid #f9a532;
+  height: 22px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+
   .general {
-    border: 10px solid #4e443f;
-    min-height: 669px;
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    scroll-behavior: auto;
+    border: 10px solid pink;
   }
-  
-  .lower-nav {
-    background-color: #847e78;
-    height: 5px;
-    position: fixed;
-    z-index: 1;
+
+  .lower-nav,
+  .top-section {
+    background-color: black;
   }
-  
+
   nav {
     color: #777;
-    height: 75px;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    overflow: hidden;
-    background-color: #fff;
-    align-items: center;
-    border-top: 10px solid #4e443f;
-    border-right: 10px solid #4e443f;
-    border-left: 10px solid #4e443f;
-    right: 0;
-    left: 0;
-  }
-  
-  .inner-section {
-    scroll-behavior: auto;
-  }
-  
-  .dummy-red,
-  .dummy-pink {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #f46226;
-    margin-top: 20px;
-  }
-  
-  .dummy-pink {
-    margin-top: 17px;
-  }
-  
-  .middle-division a,
-  .authenticate a {
-    font-size: medium;
-    font-weight: bolder;
-    color: #b0aeab;
-  }
-  
-  .conditions a {
-    color: #f45f25;
-  }
-  
-  .middle-division a:hover {
-    color: #f46226;
-  }
-  
-  .login {
-    border-right: 2px solid #b0aeab;
-    height: 15px;
-    margin-top: 12px;
-  }
-  
-  footer p {
-    font-size: small;
-  }
-  
-  .login p {
-    margin-top: -12px;
-  }
-  
-  .search {
-    margin-top: 8px;
-    color: #b0aeab;
-    cursor: pointer;
-  }
-  
-  .main-article {
-    height: 360px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: none;
-  }
-  
-  .category-file,
-  .central-image {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  
-  .desc {
-    bottom: 0;
-    height: 90px;
-  }
-  
-  .main-heading {
-    color: #cd551f;
-  }
-  
-  .category-main {
-    width: 100%;
-  }
-  
-  .inner-category {
-    display: flex;
-  }
-  
-  .primary-part {
-    flex: 1;
-  }
-  
-  footer {
-    background-color: #4e443f;
-    height: 40px;
-    bottom: 0;
-    position: fixed;
-  }
-  
-  .long-article {
-    scroll-behavior: smooth;
-    overflow: auto;
-  }
-  
-  .top-section {
-    background-color: #e8e8e8;
-    min-height: 550px;
-    overflow: auto;
-    padding-bottom: 30px;
-    margin-top: 65px;
-  }
-  
-  .text-deco {
-    padding: 0;
-    margin: 0;
-    margin-top: 5px;
-  }
-  
-  .text-read,
-  .conditions {
-    font-size: small;
-    color: #f45f25;
-  }
-  
-  .deco-color {
-    background-color: #91979d;
-  }
-  
-  .navbar {
-    position: fixed !important;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-  }
-  
-  .special-category {
-    color: #f9a532;
-    border-bottom: 2px solid #f9a532;
-    height: 22px;
-  }
-  
-  .dark-mode {
     background-color: black;
-    color: white;
-  
-    .general {
-      border: 10px solid pink;
-    }
-  
-    .lower-nav,
-    .top-section {
-      background-color: black;
-    }
-  
-    nav {
-      color: #777;
-      background-color: black;
-      border-top: 10px solid black;
-      border-right: 10px solid black;
-      border-left: 10px solid #4e443f;
-    }
+    border-top: 10px solid black;
+    border-right: 10px solid black;
+    border-left: 10px solid #4e443f;
   }
+}

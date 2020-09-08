@@ -1,3 +1,4 @@
+# rubocop:disable Style/GuardClause
 class CategoriesController < ApplicationController
   before_action :set_category, only: %i[show edit update destroy]
   before_action :require_user, only: %i[new edit update destroy show index]
@@ -74,3 +75,4 @@ class CategoriesController < ApplicationController
     end
   end
 end
+# rubocop:enable Style/GuardClause

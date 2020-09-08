@@ -1,3 +1,4 @@
+# rubocop:disable Layout/LineLength, Style/GuardClause
 module ApplicationHelper
   def like_or_dislike_btn(article)
     if current_user
@@ -82,3 +83,4 @@ module ApplicationHelper
     category.name unless @categories.empty?
   end
 end
+# rubocop:enable Layout/LineLength, Style/GuardClause
