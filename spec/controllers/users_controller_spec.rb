@@ -1,3 +1,4 @@
+# rubocop:disable Lint/UselessAssignment
 require 'rails_helper'
 RSpec.describe UsersController, type: :controller do
   fixtures :users
@@ -22,3 +23,4 @@ RSpec.describe UsersController, type: :controller do
     end
   end
 end
+# rubocop:enable Lint/UselessAssignment

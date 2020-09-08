@@ -1,10 +1,13 @@
+# rubocop:disable Layout/LineLength
 require 'rails_helper'
 
 RSpec.describe Article, type: :model do
   describe 'validations' do
     it { should validate_presence_of(:title) }
     it { should validate_presence_of(:text) }
-    it { should validate_length_of(:text).is_at_most(2000).with_message('2000 characters in comment is the maximum allowed.') }
+    it {
+      should validate_length_of(:text).is_at_most(2000).with_message '2000 characters in comment is the maximum allowed.'
+    }
   end
 
   describe 'associations' do
@@ -25,3 +28,4 @@ RSpec.describe Article, type: :model do
     end
   end
 end
+# rubocop:enable Layout/LineLength

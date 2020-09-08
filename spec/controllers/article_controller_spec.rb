@@ -1,3 +1,4 @@
+# rubocop:disable Lint/UselessAssignment
 require 'rails_helper'
 RSpec.describe ArticlesController, type: :controller do
   def login(user)
@@ -60,3 +61,4 @@ RSpec.describe ArticlesController, type: :controller do
     end
   end
 end
+# rubocop:enable Lint/UselessAssignment

@@ -1,3 +1,4 @@
+# rubocop:disable Lint/UselessAssignment
 require 'rails_helper'
 RSpec.describe SessionsController, type: :controller do
   let(:session) { Session.create!(name: 'First') }
@@ -20,3 +21,4 @@ RSpec.describe SessionsController, type: :controller do
     end
   end
 end
+# rubocop:enable Lint/UselessAssignment

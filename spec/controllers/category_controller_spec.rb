@@ -1,3 +1,4 @@
+# rubocop:disable Lint/UselessAssignment
 require 'rails_helper'
 RSpec.describe CategoriesController, type: :controller do
   def login(user)
@@ -55,3 +56,4 @@ RSpec.describe CategoriesController, type: :controller do
     end
   end
 end
+# rubocop:enable Lint/UselessAssignment
