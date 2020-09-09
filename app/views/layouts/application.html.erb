@@ -23,30 +23,31 @@
         <div class="col-md-6 justify-content-center d-flex middle-division">
           <div class ="float-left">
             <a class = "active">
-              <%= link_to "HOME", categories_path, class: "navbar-brand" %>
+              <%= link_to "Home", categories_path, class: "navbar-brand" %>
             </a>
           </div>
           <div class ="float-left">
             <a class = "active">
-              <%= link_to "ARTICLES", articles_path, class: "navbar-brand" %>
+              <%= link_to "Articles", articles_path, class: "navbar-brand" %>
             </a>
           </div>
           <div class ="float-left">
             <a class = "active">
-              <%= link_to "CATEGORIES", categories_path, class: "navbar-brand" %>
+              <%= link_to "Write an Article", new_article_path, class: "navbar-brand" %>
             </a>
           </div>
 
           <div class ="float-left">
           <a class = "active">
-            <%= link_to "NEW CATEGORY", new_category_path, class: "navbar-brand" %>
+            <%= link_to "New Category", new_category_path, class: "navbar-brand" %>
           </a>
-        </div>
+          </div>
 
           <div class ="float-left">
             
-          <button onclick="myFunction()">Toggle dark mode</button>
-        </div>
+          <button onclick="myFunction()">Toggle Dark Mode</button>
+          </div>
+
         </div>
         <div class="collapse navbar-collapse d-flex justify-content-end col-md-3 authenticate" >
           <ul class="navbar-nav">
