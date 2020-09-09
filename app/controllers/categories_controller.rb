@@ -20,40 +20,26 @@ class CategoriesController < ApplicationController
 
   def create
     @category = current_user.categories.build(category_params)
-
-    respond_to do |format|
       if @category.save
-        format.html { redirect_to @category, notice: 'Category was successfully created.' }
-        format.json { render :show, status: :created, location: @category }
+        redirect_to @category, notice: 'Category was successfully created.'
       else
-        format.html { render :new }
-        format.json { render json: @category.errors, status: :unprocessable_entity }
+        render :new 
       end
-    end
   end
 
   def update
-    respond_to do |format|
       if @category.update(category_params)
-        format.html { redirect_to @category, notice: 'Category was successfully updated.' }
-        format.json { render :show, status: :ok, location: @category }
+       redirect_to @category, notice: 'Category was successfully updated.'
       else
-        format.html { render :edit }
-        format.json { render json: @category.errors, status: :unprocessable_entity }
+        render :edit 
       end
-    end
   end
 
   def destroy
     if @category.destroy
-      respond_to do |format|
-        format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
-        format.json { head :no_content }
-      end
+    redirect_to categories_url, notice: 'Category was successfully destroyed.'
     else
-      respond_to do |format|
-        format.html { redirect_to categories_url, notice: "error: #{@category.errors.full_messages}" }
-      end
+      redirect_to categories_url, notice: "error: #{@category.errors.full_messages}" 
     end
   end
 
@@ -69,9 +55,7 @@ class CategoriesController < ApplicationController
 
   def require_same_user
     if current_user != @category.user and !current_user.admin?
-      respond_to do |format|
-        format.html { redirect_to categories_url, notice: 'You can only edit your own categories' }
-      end
+     redirect_to categories_url, notice: 'You can only edit your own categories'
     end
   end
 end

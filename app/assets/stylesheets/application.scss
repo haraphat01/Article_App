@@ -14,11 +14,7 @@
  *= require_self
  */
 
-body {
-  background-color: pink;
-  color: black;
-  font-size: 25px;
-}
+
 
 .background-image {
   background-repeat: no-repeat;
@@ -221,14 +217,12 @@ footer {
 .dark-mode {
   background-color: black;
   color: white;
-
-  .general {
-    border: 10px solid pink;
-  }
-
   .lower-nav,
   .top-section {
     background-color: black;
+    height: 5px;
+    position: fixed;
+    z-index: 1;
   }
 
   nav {
