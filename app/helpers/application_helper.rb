@@ -55,7 +55,7 @@ module ApplicationHelper
     if !categories.empty?
       render partial: 'catlist'
     elsif logged_in? && categories.empty?
-      link_to('New Category', new_category_path, class: 'btn btn-primary ml-3 mt-2')
+      link_to('New Category', new_category_path, class: 'btn btn-secondary ml-3 mt-2')
     end
   end
 
@@ -67,9 +67,7 @@ module ApplicationHelper
     end
   end
 
-  def new_category
-    link_to('New Category', new_category_path, class: 'btn btn-success mt-2 mx-2') if logged_in?
-  end
+  
 
   def cat_in_articles(form)
     render partial: 'cat_list', locals: { form: form } if current_user && Category.any?
