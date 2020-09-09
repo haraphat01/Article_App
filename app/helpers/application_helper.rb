@@ -67,8 +67,6 @@ module ApplicationHelper
     end
   end
 
-  
-
   def cat_in_articles(form)
     render partial: 'cat_list', locals: { form: form } if current_user && Category.any?
   end

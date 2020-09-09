@@ -5,47 +5,44 @@ class ArticlesController < ApplicationController
   before_action :require_same_author, only: %i[edit update destroy]
 
   def index
-    @articles = Article.most_recent
-    @article = Article.new
+    @articles = Article.includes(%i[image_attachment author]).most_recent
   end
 
   def show; end
 
   def new
-    @article = Article.new
+    @article = Article.includes([:image_attachment]).new
   end
 
   def edit; end
 
   def create
     @article = current_user.created_articles.build(article_params)
-      if @article.save
-        redirect_to @article, notice: 'Article was successfully created.' 
-       
-      else
-        
-        render :edit 
-      end
-    
+    if @article.save
+      redirect_to @article, notice: 'Article was successfully created.'
+
+    else
+
+      render :edit
+    end
   end
 
   def update
-      if @article.update(article_params)
-        redirect_to @article, notice: 'Article was successfully updated.'
-        
-      else
-        render :edit 
-        
-      end
-    
+    if @article.update(article_params)
+      redirect_to @article, notice: 'Article was successfully updated.'
+
+    else
+      render :edit
+
+    end
   end
 
   def destroy
     if @article.destroy
-     
+
       redirect_to articles_url, notice: 'Article was successfully destroyed.'
     else
-     redirect_to articles_url, notice: "error: #{@article.errors.full_messages}"
+      redirect_to articles_url, notice: "error: #{@article.errors.full_messages}"
     end
   end
 
@@ -61,7 +58,7 @@ class ArticlesController < ApplicationController
 
   def require_same_author
     if current_user != @article.author and !current_user.admin?
-       redirect_to articles_url, notice: 'You can only edit your own Article!!'
+      redirect_to articles_url, notice: 'You can only edit your own Article!!'
     end
   end
 end

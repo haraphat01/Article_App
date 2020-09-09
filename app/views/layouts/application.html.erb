@@ -14,7 +14,7 @@
 
   <body>
     <div class="general">
-    <div class="section-1">
+    <div class="inner-section">
       <nav class="navbar navbar-expand-lg d-flex flex-row">
         <div class ="float-left d-flex col-md-3">
           <h2 class="d-flex"> Punch </h2>
@@ -26,11 +26,13 @@
               <%= link_to "Home", categories_path, class: "navbar-brand" %>
             </a>
           </div>
+
           <div class ="float-left">
             <a class = "active">
               <%= link_to "Articles", articles_path, class: "navbar-brand" %>
             </a>
           </div>
+
           <div class ="float-left">
             <a class = "active">
               <%= link_to "Write an Article", new_article_path, class: "navbar-brand" %>
@@ -45,12 +47,7 @@
 
           <div class ="float-left">
           <a  class="active navbar-brand" onclick="myFunction()">Toggle Dark Mode</a>
-
           </div>
-
-
-          
-
         </div>
         <div class="collapse navbar-collapse d-flex justify-content-end col-md-3 authenticate" >
           <ul class="navbar-nav">
@@ -102,7 +99,7 @@
             <p>Privacy Policy Terms & Conditions</p> 
           </div>
           <div class="col-md-6 text-white d-flex justify-content-start">
-            <p>Copyright 2014. All rights reserved.</p> 
+            <p>Copyright 2020. All rights reserved.</p> 
           </div>
         </div> 
         <div class="col-md-2 pt-3 d-flex px-0">
@@ -117,6 +114,9 @@
         </div>
      </footer>
     </div>
+
+
+
     <script>
 function myFunction() {
    var element = document.body;

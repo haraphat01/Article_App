@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
   before_action :require_same_user, only: %i[edit update destroy]
 
   def index
-    @categories = Category.most_important
+    @categories = Category.includes([:articles]).most_important
     @famous_article = Article.most_famous
     @articles = Article.any?
   end
@@ -20,26 +20,26 @@ class CategoriesController < ApplicationController
 
   def create
     @category = current_user.categories.build(category_params)
-      if @category.save
-        redirect_to @category, notice: 'Category was successfully created.'
-      else
-        render :new 
-      end
+    if @category.save
+      redirect_to @category, notice: 'Category was successfully created.'
+    else
+      render :new
+    end
   end
 
   def update
-      if @category.update(category_params)
-       redirect_to @category, notice: 'Category was successfully updated.'
-      else
-        render :edit 
-      end
+    if @category.update(category_params)
+      redirect_to @category, notice: 'Category was successfully updated.'
+    else
+      render :edit
+    end
   end
 
   def destroy
     if @category.destroy
-    redirect_to categories_url, notice: 'Category was successfully destroyed.'
+      redirect_to categories_url, notice: 'Category was successfully destroyed.'
     else
-      redirect_to categories_url, notice: "error: #{@category.errors.full_messages}" 
+      redirect_to categories_url, notice: "error: #{@category.errors.full_messages}"
     end
   end
 
@@ -55,7 +55,7 @@ class CategoriesController < ApplicationController
 
   def require_same_user
     if current_user != @category.user and !current_user.admin?
-     redirect_to categories_url, notice: 'You can only edit your own categories'
+      redirect_to categories_url, notice: 'You can only edit your own categories'
     end
   end
 end

@@ -1,4 +1,4 @@
-# rubocop:disable Style/GuardClause, Style/DoubleNegation
+# rubocop:disable Style/GuardClause
 class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?
 
@@ -17,4 +17,4 @@ class ApplicationController < ActionController::Base
     end
   end
 end
-# rubocop:enable Style/GuardClause, Style/DoubleNegation
+# rubocop:enable Style/GuardClause
