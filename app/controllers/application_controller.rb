@@ -1,4 +1,3 @@
-# rubocop:disable Style/GuardClause
 class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?
 
@@ -11,10 +10,9 @@ class ApplicationController < ActionController::Base
   end
 
   def require_user
-    unless logged_in?
-      flash[:danger] = 'You must be logged in to perform that task'
-      redirect_to root_path
-    end
+    return if logged_in?
+
+    flash[:danger] = 'You must be logged in to perform that task'
+    redirect_to root_path
   end
 end
-# rubocop:enable Style/GuardClause
