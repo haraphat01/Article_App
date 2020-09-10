@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
   before_action :require_same_author, only: %i[edit update destroy]
 
   def index
-    @articles = Article.includes(%i[image_attachment author]).most_recent
+    @articles = Article.includes(%i[image_attachment]).most_recent
   end
 
   def show; end
