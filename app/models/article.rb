@@ -1,6 +1,5 @@
-# rubocop:disable Lint/UselessAssignment
 class Article < ApplicationRecord
-  validates :title, presence: true
+    validates :title, presence: true
   validates :text, presence: true, length: { maximum: 2000,
                                              too_long: '2000 characters in comment is the maximum allowed.' }
 
@@ -18,4 +17,3 @@ class Article < ApplicationRecord
     result = Category.includes(:user).limit(10)
   end
 end
-# rubocop:enable Lint/UselessAssignment

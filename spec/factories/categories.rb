@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :category do
-    name { 'Sample' }
+    name { "MyString" }
     priority { 1 }
-    user_id { User.first.id }
+    user_id { 1 }
   end
 end

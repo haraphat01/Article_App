@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  validates :name, presence: true
+    validates :name, presence: true
   validates :priority, presence: true
   validates_uniqueness_of :priority
   validates_uniqueness_of :name
