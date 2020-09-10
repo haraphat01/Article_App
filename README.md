@@ -12,6 +12,8 @@ This project development was achieved using the following technologies:
 
 ## Live Demo
 
+[Live Demo Link](https://abekeapo.herokuapp.com/)
+
 I dont have it yet
 
 ## Home Page of the Application
