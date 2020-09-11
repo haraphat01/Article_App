@@ -78,5 +78,15 @@ module ApplicationHelper
   def any_category(category)
     category.name unless @categories.empty?
   end
+
+  def user_new
+    if !logged_in?
+      link_to 'LOGIN', login_path, class: 'nav-link '
+      link_to 'REGISTER', new_user_path, class: 'nav-link'
+    else
+      Your Profile 'Admin' if current_user.admin?
+      link_to 'LOGOUT', logout_path, method: :delete, class: 'nav-link '
+    end
+  end
 end
 # rubocop:enable Layout/LineLength, Style/GuardClause

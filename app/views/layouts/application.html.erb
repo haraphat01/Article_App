@@ -51,34 +51,8 @@
         </div>
         <div class="collapse navbar-collapse d-flex justify-content-end col-md-3 authenticate" >
           <ul class="navbar-nav">
-            <% if !logged_in? %>
-              <li class="nav-item login">
-                  <a>
-                    <p><%= link_to "LOGIN", login_path, class: "nav-link "%></p> 
-                  </a>
-              </li>
-              <li class="nav-item ">
-                  <a>
-                    <%= link_to "REGISTER", new_user_path,  class: "nav-link"%> 
-                  </a>
-              </li>
-              <li class="nav-item search">
-                <a>
-                  <i class="fas fa-search"></i>   
-                </a>
-              </li>
-            <% else %>
-              <li class="nav-item">
-                <a class="nav-link ">
-                  Your Profile <%= "Admin" if current_user.admin? %> 
-                </a>
-              </li>
-              <li class="nav-item">
-                <a>
-                  <%= link_to "LOGOUT", logout_path, method: :delete, class: "nav-link "%> 
-                </a>
-              </li>
-            <% end %>    
+          <%= user_new %>
+    
           </ul>
         </div>
       </nav>
