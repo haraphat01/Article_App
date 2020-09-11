@@ -1,3 +1,4 @@
+# rubocop:disable Style/DoubleNegation
 class ApplicationController < ActionController::Base
   helper_method :current_user, :logged_in?
 
@@ -16,3 +17,4 @@ class ApplicationController < ActionController::Base
     redirect_to root_path
   end
 end
+# rubocop:disable Style/DoubleNegation
