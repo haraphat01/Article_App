@@ -1,3 +1,4 @@
+# rubocop:disable Lint/UselessAssignment
 require 'rails_helper'
 
 RSpec.describe 'creating a category', type: :feature do
@@ -19,3 +20,4 @@ RSpec.describe 'creating a category', type: :feature do
     click_on 'Create Category'
   end
 end
+# rubocop:enable Lint/UselessAssignment
