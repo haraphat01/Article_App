@@ -1,4 +1,3 @@
-## Ruby on Rails Capstone 
 
 ### Articles Blog Description
 This Project is based on posting and voting on articles. The article with the highest number of votes is displayed as the main article on the home page. There are various categories articles belong to.
